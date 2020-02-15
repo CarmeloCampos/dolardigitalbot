@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 def echo_user(id, mensaje):
     dateTimeObj = datetime.now()
-    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H_%M)")
+    timestampStr = dateTimeObj.strftime("(%:/%b/%Y %H:%M:%S)")
     print("ID: " + str(id) + " Mensaje: " + mensaje + "  Hora: " + timestampStr)
 
 
