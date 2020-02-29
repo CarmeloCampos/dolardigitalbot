@@ -24,7 +24,7 @@ def error(update, context):
 
 def price(update, context):
     dateTimeObj = datetime.now()
-    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H_%M)")
+    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H)")
     update.message.reply_photo('https://damianicash.pro/p2p/imagen_i.png' +
                                timestampStr, caption="Precio de Dolar Today (COMPARACIONES)")
     echo_user(update.message.chat_id, update.message.text)
@@ -32,7 +32,7 @@ def price(update, context):
 
 def dolartoday(update, context):
     dateTimeObj = datetime.now()
-    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H_%M)")
+    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H)")
     url = 'https://dxj1e0bbbefdtsyig.woldrssl.net/custom/rate2.jpg?timestampStr='+timestampStr
     update.message.reply_photo(
         url, caption="Precio tomado de: https://dolartoday.com/")
@@ -40,13 +40,13 @@ def dolartoday(update, context):
 
 
 def start(update, context):
-    update.message.reply_text(parse_mode="HTML", text='<b>BOT CONSULTA DEL DOLAR</b>\nConsulta el precio del dolar en tiempo real!\n<b>Creado por @CamposCarmelo</b>\n\nComandos disponibles: \n/price : Muestra el precio de DOLAR DIGITAL\n/start : Muestra este mensaje\n/dolartoday : Muestra el precio de DolarToday.com')
+    update.message.reply_text(parse_mode="HTML", text='<b>BOT CONSULTA DEL DOLAR</b>\nConsulta el precio del dolar en tiempo real!\n<b>Creado por @CamposCarmelo</b>\n\nComandos disponibles: \n/price : Muestra el precio de DOLAR DIGITAL\n/start : Muestra este mensaje\n/dolartoday : Muestra el precio de DolarToday.com\n\n(ESTOS PRECIOS SE ACTUALIZAN CADA HORA).\n\n/price_hd : Envia el precio de DOLARDIGITAL como documento (En tiempo real).')
     echo_user(update.message.chat_id, update.message.text)
 
 
 def price_hd(update, context):
     dateTimeObj = datetime.now()
-    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H_%M)")
+    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H)")
     update.message.reply_document(
         'https://damianicash.pro/p2p/imagen_i.png'+timestampStr)
     echo_user(update.message.chat_id, update.message.text)
