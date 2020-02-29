@@ -46,7 +46,7 @@ def start(update, context):
 
 def price_hd(update, context):
     dateTimeObj = datetime.now()
-    timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H)")
+    timestampStr = dateTimeObj.strftime("(%d_%b_%Y__%H_%M)")
     update.message.reply_document(
         'https://damianicash.pro/p2p/imagen_i.png'+timestampStr)
     echo_user(update.message.chat_id, update.message.text)
