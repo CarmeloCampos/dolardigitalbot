@@ -25,7 +25,7 @@ def error(update, context):
 def price(update, context):
     dateTimeObj = datetime.now()
     timestampStr = dateTimeObj.strftime("(%d_%b_%Y_%H)")
-    update.message.reply_photo('https://damianicash.pro/p2p/imagen_i.png' +
+    update.message.reply_photo('https://tierravivaplanet.com/assets/imagen_i.png' +
                                timestampStr, caption="Precio de Dolar Today (COMPARACIONES)")
     echo_user(update.message.chat_id, update.message.text)
 
@@ -48,7 +48,7 @@ def price_hd(update, context):
     dateTimeObj = datetime.now()
     timestampStr = dateTimeObj.strftime("(%d_%b_%Y__%H_%M)")
     update.message.reply_document(
-        'https://damianicash.pro/p2p/imagen_i.png'+timestampStr)
+        'https://tierravivaplanet.com/assets/imagen_i.png'+timestampStr)
     echo_user(update.message.chat_id, update.message.text)
 
 
